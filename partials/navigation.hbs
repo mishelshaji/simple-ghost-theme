@@ -12,6 +12,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
+
     {{!-- Links --}}
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -21,6 +22,12 @@
             </li>
             {{/foreach}}
         </ul>
+
+        {{!-- Search Icon --}}
+        <div class="my-2 my-lg-0">
+            <img src="{{asset "icons/search.svg"}}" height="30" data-toggle="modal" data-target="#searchModel">
+        </div>
+
     </div>
 
 </nav>

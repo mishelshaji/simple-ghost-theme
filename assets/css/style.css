@@ -164,3 +164,29 @@ footer {
     height: 30px;
     max-width: 150px;
 }
+
+#ghost-search-field{
+    margin: 0 1rem;
+}
+
+.modal-body{
+    padding: 0 !important;
+}
+
+#ghost-search-results {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#ghost-search-results>li {
+    padding: 5px 10px;
+    transition-duration: .5s;
+}
+
+#ghost-search-results a{
+    text-decoration: none;
+}
+
+#ghost-search-results>li:hover {
+    background-color: #f1f1f1;
+}
