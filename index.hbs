@@ -1,0 +1,43 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- The main content area --}}
+<main id="site-main">
+    <div class="container">
+
+        <div class="p-5">
+            {{!-- Iterate through each posts --}}
+            {{#foreach posts}}
+
+            <article class="{{post_class}}" style="margin-bottom: 20px;">
+                <div class="card-body">
+
+                    {{!-- Display primary tag of the post if exists--}}
+                    {{#if primary_tag}}
+                    <a href="{{primary_tag.url}}" class="badge badge-success">
+                        {{primary_tag.name}}
+                    </a>
+                    {{/if}}
+
+                    <a class="text-dark" href="{{url}}">
+                        {{!-- Post title --}}
+                        <h2>{{title}}</h2>
+                    </a>
+
+                    {{!-- Displays post excerpt. Sets to display max 170 chars if not set --}}
+                    <p>{{excerpt characters="170"}}</p>
+
+                    <div>
+                        <span class="reading-time">{{reading_time}}</span>
+                        <span> - Published: {{date published_at timeago="true"}}</span>
+                    </div>
+
+                </div>{{!--/.post-card-content--}}
+            </article>
+
+            {{/foreach}}
+        </div>
+
+    </div>
+</main>
