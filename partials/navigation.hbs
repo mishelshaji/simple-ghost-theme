@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top"
+    style="box-shadow: 0 8px 6px -6px rgb(197, 197, 197);">
+
+    {{!-- Site icon --}}
+    <a class="navbar-brand" href="{{@site.url}}">
+        <img src="{{@site.logo}}" alt="{{@site.title}}" class="site-logo">
+    </a>
+
+    {{!-- Toogler --}}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    {{!-- Links --}}
+    <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            {{#foreach navigation}}
+            <li class="nav-item {{#if current}}active{{/if}}">
+                <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a>
+            </li>
+            {{/foreach}}
+        </ul>
+    </div>
+
+</nav>
