@@ -1,0 +1,13 @@
+<div class="d-flex">
+    {{#if prev}}
+    <span class="page-item">
+        <a class="page-link" href="{{page_url prev}}" style="float: left;">&larr; Newer posts</a>
+    </span>
+    {{/if}}
+        <li class="page-item page-link">Page {{page}} of {{pages}} pages</li>
+    {{#if next}}
+    <span class="page-item">
+        <a class="page-link" href="{{page_url next}}" style="float:right">Older posts &rarr;</a>
+    </span>
+    {{/if}}
+</div>
