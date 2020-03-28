@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{@site.lang}}">
 
 <head>
     <title>{{meta_title}}</title>
@@ -19,19 +19,24 @@
 
 <body class="{{body_class}}">
 
+
     {{!-- Navigation bar --}}
-    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #ffffff;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">{{@site.title}}</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mt-2 mt-lg-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home</a>
                 </li>
             </ul>
         </div>
     </nav>
+    {{!-- End Navbar --}}
 
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     {{{body}}}
@@ -42,6 +47,7 @@
             &copy; {{date format="YYYY"}} {{@site.title}}
         </div>
     </div>
+    {{!-- End of footer --}}
 
     {{!-- Dynamic footer content from code injection etc --}}
     {{ghost_foot}}
