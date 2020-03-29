@@ -164,3 +164,49 @@ footer {
     height: 30px;
     max-width: 150px;
 }
+
+#ghost-search-results {
+    list-style-type: none;
+    padding-left: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+#ghost-search-field {
+    font-size: 1.5rem !important;
+}
+
+#ghost-search-results>li {
+    padding: 5px 10px;
+    transition-duration: .5s;
+    border-radius: 8px;
+}
+
+#ghost-search-results a {
+    text-decoration: none;
+}
+
+#ghost-search-results>li:hover {
+    background-color: #e2e2e2;
+}
+
+.search-content {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+
+}
+
+#searchCloseButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    background-size: 20px;
+    background-image: url("../icons/close.svg");
+    background-position: center;
+    background-color: #000000;
+    border: 1px solid #000000;
+}

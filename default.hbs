@@ -27,22 +27,40 @@
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     {{{body}}}
 
+    {{> "search"}}
+
     {{!-- Footer content goes here --}}
     <div class="card">
         <div class="card-footer text-muted">
             &copy; {{date format="YYYY"}} {{@site.title}}
         </div>
     </div>
+
     {{!-- End of footer --}}
 
-    {{!-- Dynamic footer content from code injection etc --}}
-    {{ghost_foot}}
+    {{!-- Content API --}}
+    {{!-- <script src="https://unpkg.com/@tryghost/content-api@1.3.3/umd/content-api.min.js"></script> --}}
+
+    {{!-- Search API --}}
+    {{!-- <script src="https://cdn.jsdelivr.net/npm/ghost-search@1.0.1/dist/ghost-search.min.js"></script> --}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery Slim first, then Popper.js, then Bootstrap JS -->
     <script src="{{asset "js/jquery.min.js"}}"></script>
     <script src="{{asset "js/popper.min.js"}}"></script>
     <script src="{{asset "js/bootstrap.min.js"}}"></script>
+
+    {{!-- Scripts for search --}}
+    <script src="{{asset 'js/ghost-content-api-v1.js'}}"></script>
+    <script src="{{asset 'js/ghost-search.js'}}"></script>
+    
+    {{!-- Dynamic footer content from code injection etc --}}
+    {{ghost_foot}}
+
+    {{!-- Custom script for the theme --}}
+    <script src="{{asset 'js/script.js'}}"></script>
+
+
 </body>
 
 </html>
