@@ -40,6 +40,10 @@ into the {body} of the default.hbs template --}}
                     {{!-- Display the post content --}}
                     {{content}}
                 </div>
+
+                {{!-- Include comment section --}}
+                {{> "comment"}}
+
             </section>
 
         </article>
